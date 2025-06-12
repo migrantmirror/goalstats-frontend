@@ -3,9 +3,11 @@ import React, { useEffect, useState } from 'react';
 const LiveMatches = () => {
   const [matches, setMatches] = useState([]);
 
+  // Use the environment variable or fallback to localhost for development
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:10000';
+
   useEffect(() => {
-    // Fetch live matches from backend running on port 10000
-    fetch('http://localhost:10000/api/live-matches')
+    fetch(`${API_BASE_URL}/api/live-matches`)
       .then((res) => res.json())
       .then((data) => {
         console.log('API Response:', data); // Debugging
@@ -14,7 +16,7 @@ const LiveMatches = () => {
       .catch((error) => {
         console.error('Error fetching live matches:', error);
       });
-  }, []);
+  }, [API_BASE_URL]);
 
   return (
     <div>
