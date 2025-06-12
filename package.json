@@ -15,11 +15,13 @@
     "react-router-dom": "^6.17.0"
   },
   "devDependencies": {
+    "@tailwindcss/cli": "^4.1.10",
     "@vitejs/plugin-react": "^4.0.0",
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.5",
     "serve": "^14.2.4",
     "tailwindcss": "^4.1.10",
+    "tailwindcss-cli": "^0.1.2",
     "vite": "^5.0.0"
   }
 }
