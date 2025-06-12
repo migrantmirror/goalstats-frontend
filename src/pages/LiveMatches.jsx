@@ -4,12 +4,12 @@ const LiveMatches = () => {
   const [matches, setMatches] = useState([]);
 
   useEffect(() => {
-    // Replace the URL with your actual Flask endpoint
+    // Fetch live matches from backend running on port 10000
     fetch('http://localhost:10000/api/live-matches')
       .then((res) => res.json())
       .then((data) => {
-        console.log('API Response:', data); // Debug log
-        setMatches(data.matches || []); // Assumes response structure like { matches: [...] }
+        console.log('API Response:', data); // Debugging
+        setMatches(data.matches || []); // Handle response safely
       })
       .catch((error) => {
         console.error('Error fetching live matches:', error);
@@ -18,7 +18,7 @@ const LiveMatches = () => {
 
   return (
     <div>
-      <h2 className='text-xl font-semibold mb-4'>Live Matches</h2>
+      <h2 className="text-xl font-semibold mb-4">Live Matches</h2>
       {matches.length === 0 ? (
         <p>No live matches to display.</p>
       ) : (
