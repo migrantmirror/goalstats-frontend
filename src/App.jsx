@@ -9,6 +9,12 @@ const App = () => {
   return (
     <div className="min-h-screen bg-gray-100 text-gray-900">
       <NavTabs />
+
+      {/* Tailwind CSS test box */}
+      <div className="m-4 p-4 bg-blue-100 text-blue-800 font-semibold rounded">
+        Tailwind CSS is working perfectly!
+      </div>
+
       <div className="p-4">
         <Routes>
           <Route path="/" element={<LiveMatches />} />
