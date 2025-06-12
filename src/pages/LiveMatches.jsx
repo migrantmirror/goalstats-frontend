@@ -7,7 +7,7 @@ const LiveMatches = () => {
   const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:10000';
 
   useEffect(() => {
-    fetch(`${API_BASE_URL}/api/live-matches`)
+    fetch(`${API_BASE_URL}/api/predictions`)
       .then((res) => res.json())
       .then((data) => {
         console.log('API Response:', data); // Debugging
