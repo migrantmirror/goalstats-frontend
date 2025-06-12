@@ -5,7 +5,7 @@ const LiveMatches = () => {
 
   useEffect(() => {
     // Replace the URL with your actual Flask endpoint
-    fetch('http://localhost:5000/api/live-matches')
+    fetch('http://localhost:10000/api/live-matches')
       .then((res) => res.json())
       .then((data) => {
         console.log('API Response:', data); // Debug log
